@@ -213,7 +213,7 @@ export const getOverlap = <T extends Span>(value: T[]) => {
       })
       .filter(Boolean).length;
 
-    if (tagOverlap >= 2) {
+    if (tagOverlap >= 1000) {
       overlap += 1;
     }
   });

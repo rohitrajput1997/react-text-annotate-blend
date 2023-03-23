@@ -1,6 +1,6 @@
 import React from "react";
-import { luminTest } from "./utils/utils";
 import { MarkedSpan } from "../types/annotate-types";
+import { luminTest } from "./utils/utils";
 
 export interface MarkProps<T> {
   key: string;
@@ -38,8 +38,12 @@ const Mark = <T extends MarkedSpan>({
     >
       {content}
       {tag && (
-        <span style={{ fontSize: "0.7em", fontWeight: 500, marginLeft: 6 }}>
-          {tag}
+        <span style={{ fontWeight: 'bold', marginLeft: 6, fontSize: '10px',
+          background: 'white',
+          color: 'black',
+          padding: '1px 4px',
+          borderRadius: '10px' }}>
+          {String(tag)}
         </span>
       )}
     </mark>
